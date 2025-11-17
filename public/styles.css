@@ -1,0 +1,441 @@
+:root {
+  font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+  background: #060a11;
+  color: #f3f4f6;
+  --card-bg: rgba(14, 20, 31, 0.9);
+  --accent: #f04343;
+  --text-muted: #9ca3af;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #112035, #05070d 60%);
+  min-height: 100vh;
+}
+
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: 0.4rem;
+  font-weight: 500;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.card h3 {
+  margin-top: 0;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.label {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 0.2rem;
+}
+
+.value {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.value.highlight {
+  color: var(--accent);
+}
+
+.breakdown-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.75rem;
+}
+
+.breakdown-list li {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.action-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.action-bar button {
+  flex: 1;
+  min-width: 120px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.action-bar button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.asset-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.asset-item {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.asset-item h4 {
+  margin-top: 0;
+  margin-bottom: 0.2rem;
+}
+
+.asset-item .meta {
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.1rem;
+}
+
+.asset-item .value {
+  margin-top: 0.6rem;
+  font-size: 1.2rem;
+  color: var(--accent);
+}
+
+.asset-item .notes {
+  color: #d1d5db;
+  font-size: 0.9rem;
+}
+
+.login-hero {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.hero-card {
+  background: linear-gradient(135deg, rgba(9, 14, 25, 0.9), rgba(28, 9, 22, 0.95));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 2rem;
+  width: min(480px, 100%);
+  text-align: center;
+  box-shadow: 0 25px 65px rgba(0, 0, 0, 0.55);
+  position: relative;
+  overflow: hidden;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.securoserv-emblem {
+  width: 140px;
+  height: 140px;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.7));
+}
+
+.logo-text {
+  font-size: 1.6rem;
+  color: #c6c8d3;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  text-transform: none;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6), 0 0 1px #1c1c1f;
+}
+
+.hero-card .tagline {
+  color: var(--text-muted);
+  letter-spacing: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-card label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  text-align: left;
+  margin: 0.6rem 0;
+  letter-spacing: 0.2rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.hero-card input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  padding: 0.75rem 1rem;
+  color: #fff;
+}
+
+.hero-card button {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  border-radius: 999px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  cursor: pointer;
+}
+
+.hero-card .version {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.3rem;
+}
+
+.hero-card button.success {
+  background: #0bbf6b;
+  letter-spacing: 0.2rem;
+}
+
+.hero-card.authenticating {
+  box-shadow: 0 25px 65px rgba(240, 67, 67, 0.35);
+}
+
+.hero-card.authenticated {
+  border-color: rgba(240, 67, 67, 0.6);
+  box-shadow: 0 35px 85px rgba(12, 170, 96, 0.35);
+}
+
+.login-wave {
+  position: absolute;
+  inset: -50% -60% auto;
+  height: 220%;
+  background: linear-gradient(110deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0) 70%);
+  transform: translateX(-120%) rotate(12deg);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hero-card.authenticating .login-wave {
+  opacity: 0.7;
+  animation: sweep 1.4s linear infinite;
+}
+
+.hero-card.authenticated .login-wave {
+  display: none;
+}
+
+@keyframes sweep {
+  from {
+    transform: translateX(-120%) rotate(12deg);
+  }
+  to {
+    transform: translateX(120%) rotate(12deg);
+  }
+}
+
+
+.tab-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.tab-nav button {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.tab-nav button.is-active {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.tab-panels {
+  position: relative;
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.is-active {
+  display: block;
+}
+
+.photo-strip {
+  margin-top: 0.75rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.75rem;
+}
+
+.photo-strip figure {
+  margin: 0;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.photo-strip img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-strip figcaption {
+  font-size: 0.7rem;
+  padding: 0.4rem 0.6rem;
+  color: var(--text-muted);
+}
+
+.asset-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.asset-form .form-title {
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  color: var(--text-muted);
+}
+
+.asset-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.asset-form input,
+.asset-form select,
+.asset-form textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 0.7rem 0.9rem;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.asset-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.asset-form button[type='submit'] {
+  align-self: flex-end;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  cursor: pointer;
+}
+
+.checkbox-field {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6rem;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.checkbox-field input {
+  width: auto;
+}
+
+.form-feedback {
+  margin: 0;
+  color: #0bbf6b;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.form-feedback.is-visible {
+  opacity: 1;
+}
+
+.dashboard {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.dashboard.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 640px) {
+  main {
+    padding: 1rem;
+  }
+
+  .action-bar {
+    flex-direction: column;
+  }
+}
